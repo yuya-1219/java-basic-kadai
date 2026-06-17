@@ -12,7 +12,7 @@ public class Jyanken_Chapter28 {
 	    String myhand = "";
 	    do{
 	    		myhand = scanner.nextLine();
-	    		if(myhand.contains("r") || myhand.contains("s") || myhand.contains("p")) {
+	    		if(myhand.equals("r") || myhand.equals("s") || myhand.equals("p")) {
 	    			break;
 	    		} else {
 	    			System.out.println("もう一度入力してください");
@@ -25,7 +25,7 @@ public class Jyanken_Chapter28 {
 	public String getRandom() {
 		String rhand = "";
 		String[] hand = {"r","s","p"};
-		int random = (int) Math.round(Math.random() * 2);
+		int random = (int) Math.floor(Math.random() * 2);
 		rhand = hand[random];
 		return rhand;
 	}
@@ -35,39 +35,39 @@ public class Jyanken_Chapter28 {
 		janken.put("s", "チョキ");
 		janken.put("p", "パー");
 		
-		if(a.contains("r") && b.contains("r")) {
+		if(a.equals("r") && b.equals("r")) {
 			System.out.println("自分の手は" + janken.get(a) + "、対戦相手の手は" + janken.get(b));
 			System.out.println("あいこです");
 		}
-		else if(a.contains("s") && b.contains("s")) {
+		else if(a.equals("s") && b.equals("s")) {
 			System.out.println("自分の手は" + janken.get(a) + "、対戦相手の手は" + janken.get(b));
 			System.out.println("あいこです");
 		}
-		else if(a.contains("p") && b.contains("p")) {
+		else if(a.equals("p") && b.equals("p")) {
 			System.out.println("自分の手は" + janken.get(a) + "、対戦相手の手は" + janken.get(b));
 			System.out.println("あいこです");
 		}
-		else if(a.contains("r") && b.contains("s")) {
+		else if(a.equals("r") && b.equals("s")) {
 			System.out.println("自分の手は" + janken.get(a) + "、対戦相手の手は" + janken.get(b));
 			System.out.println("自分の勝ちです");
 		}
-		else if(a.contains("r") && b.contains("p")) {
+		else if(a.equals("r") && b.equals("p")) {
 			System.out.println("自分の手は" + janken.get(a) + "、対戦相手の手は" + janken.get(b));
 			System.out.println("自分の負けです");
 		}
-		else if(a.contains("s") && b.contains("r")) {
+		else if(a.equals("s") && b.equals("r")) {
 			System.out.println("自分の手は" + janken.get(a) + "、対戦相手の手は" + janken.get(b));
 			System.out.println("自分の負けです");
 		}
-		else if(a.contains("s") && b.contains("p")) {
+		else if(a.equals("s") && b.equals("p")) {
 			System.out.println("自分の手は" + janken.get(a) + "、対戦相手の手は" + janken.get(b));
 			System.out.println("自分の勝ちです");
 		}
-		else if(a.contains("p") && b.contains("r")) {
+		else if(a.equals("p") && b.equals("r")) {
 			System.out.println("自分の手は" + janken.get(a) + "、対戦相手の手は" + janken.get(b));
 			System.out.println("自分の勝ちです");
 		}
-		else if(a.contains("p") && b.contains("s")) {
+		else if(a.equals("p") && b.equals("s")) {
 			System.out.println("自分の手は" + janken.get(a) + "、対戦相手の手は" + janken.get(b));
 			System.out.println("自分の負けです");
 		}
