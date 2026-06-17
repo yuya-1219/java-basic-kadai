@@ -25,7 +25,7 @@ public class Jyanken_Chapter28 {
 	public String getRandom() {
 		String rhand = "";
 		String[] hand = {"r","s","p"};
-		int random = (int) Math.floor(Math.random() * 2);
+		int random = (int) Math.floor(Math.random() * 3);
 		rhand = hand[random];
 		return rhand;
 	}
